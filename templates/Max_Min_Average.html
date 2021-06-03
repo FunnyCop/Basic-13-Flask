@@ -5,20 +5,20 @@
     <p>Given an array, print max, min and average values</p>
     <p>Array: [4, 8, 2, 10, 1, 5, 9, 7, 3, 6]</p>
     <span>
-    {% set arr = [4, 8, 2, 10, 1, 5, 9, 7, 3, 6] %}
-    {% set max = namespace(value=arr[0]) %}
-    {% set min = namespace(value=arr[0]) %}
-    {% set avg = namespace(value=arr[0]) %}
-    {% for x in arr %}
-        {% if x > max.value %}
-            {% set max.value = x %}
-        {% endif %}
-        {% if x < min.value %}
-            {% set min.value = x %}
-        {% endif %}
-        {% set avg.value = avg.value + x %}
-    {% endfor %}
-    {% set avg.value = avg.value / arr|length %}
+        {% set arr = [4, 8, 2, 10, 1, 5, 9, 7, 3, 6] %}
+        {% set max = namespace(value=arr[0]) %}
+        {% set min = namespace(value=arr[0]) %}
+        {% set avg = namespace(value=arr[0]) %}
+        {% for x in arr %}
+            {% if x > max.value %}
+                {% set max.value = x %}
+            {% endif %}
+            {% if x < min.value %}
+                {% set min.value = x %}
+            {% endif %}
+            {% set avg.value = avg.value + x %}
+        {% endfor %}
+        {% set avg.value = avg.value / arr|length %}
         <p>Max: {{ max.value }}</p>
         <p>Min: {{ min.value }}</p>
         <p>Average: {{ avg.value }}</p>

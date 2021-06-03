@@ -4,12 +4,12 @@
     <h1>Print Sum 0-255</h1>
     <p>Print integers from 0 to 255, and the sum so far</p>
     <span>
-    {% set sum = namespace(value=0) %}
-    {% for x in range(256) %}
-        {% set sum.value = sum.value + x %}
-        <p>{{ x }}</p>
-        <p>{{ sum.value }}</p>
-    {% endfor %}
+        {% set sum = namespace(value=0) %}
+        {% for x in range(256) %}
+            {% set sum.value = sum.value + x %}
+            <p>{{ x }}</p>
+            <p>{{ sum.value }}</p>
+        {% endfor %}
     </span>
 </section>
 {% endblock %}

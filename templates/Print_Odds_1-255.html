@@ -4,11 +4,11 @@
     <h1>Print Odds 1-255</h1>
     <p>Print all odd integers from 1 to 255</p>
     <span>
-    {% for x in range(1, 256) %}
-        {% if x % 2 != 0 %}
-            <p>{{ x }}</p>
-        {% endif %}
-    {% endfor %}
+        {% for x in range(1, 256) %}
+            {% if x % 2 != 0 %}
+                <p>{{ x }}</p>
+            {% endif %}
+        {% endfor %}
     </span>
 </section>
 {% endblock %}

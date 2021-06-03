@@ -5,11 +5,11 @@
     <p>Given an array, square each value in the array</p>
     <p>Array: [5, 3, 6, 1, 10, 2, 7, 4, 8, 9]</p>
     <span>
-    {% set square = namespace(value=[]) %}
-    {% set arr = [5, 3, 6, 1, 10, 2, 7, 4, 8, 9] %}
-    {% for x in arr %}
-        {{ square.value.append(x * x) or ''}}
-    {% endfor %}
+        {% set square = namespace(value=[]) %}
+        {% set arr = [5, 3, 6, 1, 10, 2, 7, 4, 8, 9] %}
+        {% for x in arr %}
+            {{ square.value.append(x * x) or ''}}
+        {% endfor %}
         <p>{{ square.value }}</p>
     </span>
 </section>

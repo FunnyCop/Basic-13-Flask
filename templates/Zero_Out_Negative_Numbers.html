@@ -5,16 +5,16 @@
     <p>Set negative array values to zero</p>
     <p>Array: [-3, 2, 5, -1, -5, -4, 3, 4, 0, 1]</p>
     <span>
-    {% set zero = namespace(value=[]) %}
-    {% set arr = [-3, 2, 5, -1, -5, -4, 3, 4, 0, 1] %}
-    {% for x in arr %}
-        {% if x < 0 %}
-            {{ zero.value.append(0) or '' }}
-        {% endif %}
-        {% if x >= 0 %}
-        {{ zero.value.append(x) or '' }}
-        {% endif %}
-    {% endfor %}
+        {% set zero = namespace(value=[]) %}
+        {% set arr = [-3, 2, 5, -1, -5, -4, 3, 4, 0, 1] %}
+        {% for x in arr %}
+            {% if x < 0 %}
+                {{ zero.value.append(0) or '' }}
+            {% endif %}
+            {% if x >= 0 %}
+            {{ zero.value.append(x) or '' }}
+            {% endif %}
+        {% endfor %}
         <p>{{ zero.value }}</p>
     </span>
 </section>
