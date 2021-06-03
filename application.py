@@ -1,5 +1,5 @@
 from logging import debug
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
