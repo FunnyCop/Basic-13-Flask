@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% block content %}
+<section>
+    <h1>Iterate and Print Array</h1>
+    <p>Print all values in a given array</p>
+    <p>Array: [3, 1, 2, 5, 9, 7, 8, 10, 0, 6]</p>
+    <span>
+    {% set arr = [3, 1, 2, 5, 9, 7, 8, 10, 0, 6] %}
+    {% for x in arr %}
+        <p>{{ x }}</p>
+    {% endfor %}
+    </span>
+</section>
+{% endblock %}

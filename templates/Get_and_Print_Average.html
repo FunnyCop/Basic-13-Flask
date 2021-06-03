@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block content %}
+<section>
+    <h1>Get and Print Average</h1>
+    <p>Analyze an array’s values and print the average</p>
+    <p>Array: [1, 3, 5, 9, 6, 10, 7, 4, 2, 0]</p>
+    <span>
+    {% set avg = namespace(value=0) %}
+    {% set arr = [1, 3, 5, 9, 6, 10, 7, 4, 2, 0] %}
+    {% for x in arr %}
+        {% set avg.value = avg.value + x %}
+    {% endfor %}
+    {% set avg.value = avg.value / arr|length %}
+        <p>{{ avg.value }}</p>
+    </span>
+</section>
+{% endblock %}

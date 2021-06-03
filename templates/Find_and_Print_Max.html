@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+{% block content %}
+<section>
+    <h1>Find and Print Max</h1>
+    <p>Print the largest element in a given array</p>
+    <p>Array: [8, 0, 1, 2, 6, 4, 3, 9, 10, 7]</p>
+    <span>
+    {% set max = namespace(value=0) %}
+    {% set arr = [8, 0, 1, 2, 6, 4, 3, 9, 10, 7] %}
+    {% for x in arr %}
+        {% if x > max.value %}
+            {% set max.value = x %}
+        {% endif %}
+    {% endfor %}
+        <p>{{ max.value }}</p>
+    </span>
+</section>
+{% endblock %}

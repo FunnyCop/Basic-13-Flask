@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+{% block content %}
+<section>
+    <h1>Greater Than Y</h1>
+    <p>Count and print the number of array values less than a given Y</p>
+    <p>Array: [7, 10, 4, 0, 6, 1, 5, 3, 2, 8]</p>
+    <p>Y: 4</p>
+    <span>
+    {% set count = namespace(value=0) %}
+    {% set arr = [7, 10, 4, 0, 6, 1, 5, 3, 2, 8] %}
+    {% for x in arr %}
+        {% set y = 4 %}
+        {% if x > y %}
+            {% set count.value = count.value + 1 %}
+        {% endif %}
+    {% endfor %}
+        <p>{{ count.value }}</p>
+    </span>
+</section>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+{% block content %}
+<section>
+    <h1>Shift Array Values</h1>
+    <p>Shift array values: drop the first and leave '0'​ at end</p>
+    <p>Array: [1, 3, 5, 6, 7, 0, 2, 8, 9, 10]</p>
+    <span>
+    {% set shift = namespace(value=[]) %}
+    {% set arr = [1, 3, 5, 6, 7, 0, 2, 8, 9, 10] %}
+    {% for x in arr %}
+        {% if loop.index > 1 %}
+            {{ shift.value.append(x) or '' }}
+        {% endif %}
+    {% endfor %}
+    {{ shift.value.append(0) or '' }}
+        <p>{{ shift.value }}</p>
+    </span>
+</section>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% block content %}
+<section>
+    <h1>Array with Odds</h1>
+    <p>Create an array with odd integers from 1-255</p>
+    <span>
+    {% set arr = namespace(value=[]) %}
+    {% for x in range(1, 256) %}
+        {% if x % 2 != 0 %}
+            {{ arr.value.append(x)  or '' }}
+        {% endif %}
+    {% endfor %}
+        <p>{{ arr.value }}</p>
+    </span>
+</section>
+{% endblock %}
